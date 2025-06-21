@@ -2,27 +2,77 @@
 <html>
 <head>
     <title>Cyber Attack Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #5a67d8;
+        }
+    </style>
 </head>
 <body>
-    <h2>Enter Network Details</h2>
-    <form action="/predict" method="post">
-        <label for="Protocol">Protocol:</label>
-        <input type="text" id="Protocol" name="Protocol" required><br><br>
+    <div class="form-container">
+        <h2>Cyber Attack Prediction</h2>
+        <form action="/predict" method="post">
+            <label for="Protocol">Protocol:</label>
+            <input type="text" id="Protocol" name="Protocol" required>
 
-        <label for="PacketType">Packet Type:</label>
-        <input type="text" id="PacketType" name="PacketType" required><br><br>
+            <label for="PacketType">Packet Type:</label>
+            <input type="text" id="PacketType" name="PacketType" required>
 
-        <label for="TrafficType">Traffic Type:</label>
-        <input type="text" id="TrafficType" name="TrafficType" required><br><br>
+            <label for="TrafficType">Traffic Type:</label>
+            <input type="text" id="TrafficType" name="TrafficType" required>
 
-        <label for="AnomalyScore">Anomaly Score (numaric):</label>
-        <input type="number" id="AnomalyScore" name="AnomalyScore"  required><br><br>   
+            <label for="AnomalyScore">Anomaly Score (numeric):</label>
+            <input type="number" id="AnomalyScore" name="AnomalyScore" required>
 
-        <input type="submit" value="Predict">
-    </form>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
 </body>
 </html>
-
-
-
-<!-- step="1" min="0" max="100"  -->

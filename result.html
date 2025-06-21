@@ -2,10 +2,52 @@
 <html>
 <head>
     <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(71, 47, 207);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .result-box {
+            background-color: #fff;
+            padding: 50px 60px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .result-box h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .result-box p {
+            font-size: 25px;
+            color: #555;
+        }
+        .return-btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 20px 30px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+        .return-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h2>Prediction Result</h2>
-    <p><strong>Prediction:</strong> {{ prediction }}</p>
-    <a href="/">Back to form</a>
+    <div class="result-box">
+        <h1>Prediction Result</h1>
+        <p>{{ prediction }}</p>
+        <a href="/" class="return-btn">← Return to Form</a>
+    </div>
 </body>
 </html>
