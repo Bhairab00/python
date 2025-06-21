@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Attack Prediction</title>
+</head>
+<body>
+    <h2>Enter Network Details</h2>
+    <form action="/predict" method="post">
+        <label for="Protocol">Protocol:</label>
+        <input type="text" id="Protocol" name="Protocol" required><br><br>
+
+        <label for="PacketType">Packet Type:</label>
+        <input type="text" id="PacketType" name="PacketType" required><br><br>
+
+        <label for="TrafficType">Traffic Type:</label>
+        <input type="text" id="TrafficType" name="TrafficType" required><br><br>
+
+        <label for="AnomalyScore">Anomaly Score (numaric):</label>
+        <input type="number" id="AnomalyScore" name="AnomalyScore"  required><br><br>   
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
+
+
+
+<!-- step="1" min="0" max="100"  -->
